@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>File Converter · PDF / DOCX ⇄ TXT</title>
+    <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+    <main class="container">
+        <header>
+            <h1>File Converter</h1>
+            <p class="sub">Convert between PDF / DOCX / TXT. Simple. Fast. Clean.</p>
+        </header>
+
+        <section class="card">
+            <form id="convertForm" aria-describedby="result">
+                <div class="field">
+                    <label class="label">Choose files</label>
+                    <input id="file" name="file" type="file" accept=".pdf,.docx,.txt" multiple required />
+                    <small>Supported: PDF, DOCX, TXT. Max 25MB per file. Up to 10 files.</small>
+                </div>
+
+                <div class="field">
+                    <label class="label">Target format</label>
+                    <select id="target" name="target">
+                        <option value="txt">TXT</option>
+                        <option value="docx">DOCX</option>
+                    </select>
+                </div>
+
+                <button id="submitBtn" type="submit">Convert</button>
+            </form>
+
+            <div id="result" class="result hidden" aria-live="polite"></div>
+        </section>
+
+        <footer>
+            <a href="/health" target="_blank">Health check</a>
+        </footer>
+    </main>
+
+    <script src="/main.js"></script>
+</body>
+
+</html>

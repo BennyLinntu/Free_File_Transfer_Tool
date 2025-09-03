@@ -1,0 +1,30 @@
+{
+    "name": "file-converter-web",
+    "version": "1.0.0",
+    "type": "module",
+    "description": "Minimal full-stack web app to convert files (PDF/DOCX) to TXT or DOCX.",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "dev": "node --watch server.js"
+    },
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "docx": "^8.0.1",
+        "express": "^4.19.2",
+        "helmet": "^7.1.0",
+        "express-rate-limit": "^7.3.1",
+        "mammoth": "^1.6.0",
+        "multer": "^2.0.0",
+        "nanoid": "^5.0.7",
+        "pdf-parse": "^1.1.1",
+        "archiver": "^7.0.1",
+        "cookie-parser": "^1.4.6",
+        "csurf": "^1.11.0",
+        "file-type": "^18.7.0",
+        "morgan": "^1.10.0",
+        "pino": "^9.5.0",
+        "clamscan": "^2.1.1"
+    }
+}
