@@ -1,51 +1,65 @@
-# 文件转换器（PDF / DOCX / TXT）
+# File Converter (PDF / DOCX / TXT)
 
-一个精简好看的全栈网页应用：上传 PDF / DOCX / TXT，转换为 TXT 或 DOCX，并提供下载链接。
+A clean and minimal full-stack web application: upload a PDF / DOCX /
+TXT file, convert it to TXT or DOCX, and download the result.
 
-## 功能
+## Features
 
-- 源格式：PDF、DOCX、TXT
-- 目标格式：TXT、DOCX
-- PDF→TXT、PDF→DOCX、DOCX→TXT、TXT→DOCX、DOCX→DOCX（重排为纯文本）
-- 单文件最大 25MB，转换后自动清理临时文件
+-   **Source formats:** PDF, DOCX, TXT\
+-   **Target formats:** TXT, DOCX\
+-   Supported conversions:
+    -   PDF → TXT\
+    -   PDF → DOCX\
+    -   DOCX → TXT\
+    -   TXT → DOCX\
+    -   DOCX → DOCX (reformat as plain text)\
+-   Maximum file size: 25 MB\
+-   Temporary files are automatically cleaned up after conversion
 
-## 运行步骤（Windows / PowerShell）
+## How to Run (Windows / PowerShell)
 
-1. 安装 Node.js LTS（如果未安装）
+1.  Install Node.js LTS (if not installed)
 
-- 前往 <https://nodejs.org/> 下载并安装 LTS 版本（包含 npm）
-- 安装后重新打开 PowerShell
+    -   Go to <https://nodejs.org/> and download/install the LTS version
+        (includes npm)\
+    -   Reopen PowerShell after installation
 
-2. 安装依赖并启动
+2.  Install dependencies and start
 
-```powershell
-cd "c:\Users\Benny\System File\Desktop\WEB"
-npm install
-npm start
-```
+    ``` powershell
+    cd "c:\Users\Benny\System File\Desktop\WEB"
+    npm install
+    npm start
+    ```
 
-3. 打开浏览器访问
+3.  Open the browser and visit
 
-- <http://localhost:3000>
+    -   <http://localhost:3000>
 
-## 目录结构
+## Project Structure
 
-- `server.js` 后端 API（Express）与静态资源托管
-- `public/` 前端页面与样式、脚本
-- `uploads/` 上传的临时文件（运行时自动创建）
-- `converted/` 转换好的文件（下载后自动删除）
+-   `server.js` -- Backend API (Express) and static file hosting\
+-   `public/` -- Frontend pages, styles, and scripts\
+-   `uploads/` -- Temporary uploaded files (created automatically at
+    runtime)\
+-   `converted/` -- Converted files (deleted automatically after
+    download)
 
-## 常见问题
+## FAQ
 
-- 扫描版 PDF（仅包含图片）无法直接提取文字，需要 OCR 才能识别。
-  - 可考虑后续接入 Tesseract OCR 或在线 OCR 服务。
-- 如果 3000 端口被占用，可设置环境变量 `PORT=xxxx` 再启动。
+-   Scanned PDFs (image-only) cannot extract text directly; OCR is
+    required.
+    -   You may later integrate Tesseract OCR or an online OCR service.\
+-   If port 3000 is already in use, set an environment variable
+    `PORT=xxxx` before starting.
 
-## 安全与限制
+## Security & Limitations
 
-- 仅做文本抽取与生成，不执行宏/脚本
-- 上传与导出均会在下载后清理临时文件
+-   Only performs text extraction and conversion, no macros/scripts
+    executed\
+-   Uploaded and exported files are cleaned up automatically after
+    download
 
-## 许可证
+## License
 
 MIT
